@@ -23,6 +23,7 @@ app.use(bodyParser.json());
 
 app.get('/api/products', async (req, res) => {
   try {
+    
     const products = await Product.find();
     res.send(products);
   } catch (err) {
